@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+
+    <class name="org.romeo.instamarketApp.models.User" table="users">
+        <id name="username" column="username"/>
+        <property name="password" column="password"/>
+        <property name="location" column="location"/>
+        <property name="followers" column="followers"/>
+        <property name="profession" column="profession"/>
+        <property name="FCM_TOKEN" column="fcm_token"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+
+    <class name="org.romeo.instamarketApp.models.InFilter" table="in_filters">
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+
+        <property name="mediaType" column="media_type"/>
+        <property name="addType" column="add_type"/>
+        <property name="price" column="price"/>
+
+        <many-to-one name="user"
+                     fetch="join"
+                     column="username"
+                     class="org.romeo.instamarketApp.models.User"
+                     cascade="none"/>
+    </class>
+</hibernate-mapping>
+        <!--lazy="proxy"-->
